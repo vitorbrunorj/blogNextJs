@@ -1,30 +1,27 @@
-// src/components/Footer.tsx
-import { type FC } from 'react'
+import Link from 'next/link'
 
-const Footer: FC = () => {
+export function Footer() {
   return (
-    <footer>
+    <footer className="bg-slate-400">
       <hr />
       <p>© 2022 Sua Empresa</p>
       <ul>
         <li>
-          <a href="/privacy">Política de Privacidade</a>
+          <Link href="/privacy">Política de Privacidade</Link>
         </li>
         <li>
-          <a href="/terms">Termos de Serviço</a>
+          <Link href="/terms">Termos de Serviço</Link>
         </li>
       </ul>
       <ul>
         <li>
-          <a href="https://www.facebook.com/suaempresa">Facebook</a>
+          <Link href="https://www.facebook.com/suaempresa">Facebook</Link>
         </li>
         <li>
-          <a href="https://www.twitter.com/suaempresa">Twitter</a>
+          <Link href="https://www.twitter.com/suaempresa">Twitter</Link>
         </li>
       </ul>
       <br />
     </footer>
   )
 }
-
-export default Footer

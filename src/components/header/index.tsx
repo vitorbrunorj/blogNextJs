@@ -6,7 +6,7 @@ export function Header() {
       <Link href="/">
         <img src="/logo.png" alt="Logo da Empresa" />
       </Link>
-      <nav>
+      <nav className="bg-slate-400">
         <ul>
           <li>
             <Link href="/">Home</Link>

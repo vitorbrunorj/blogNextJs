@@ -1,9 +1,6 @@
-import { Header } from '@/components/header'
-import { Open_Sans } from 'next/font/google'
 import './globals.css'
-import Footer from '@/components/footer/index'
-
-const inter = Open_Sans({ subsets: ['latin'] })
+import { Header } from '@/components/header'
+import { Footer } from '@/components/footer'
 
 interface Metadata {
   title: string
@@ -22,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body>
         <Header />
         {children}
         <Footer />
