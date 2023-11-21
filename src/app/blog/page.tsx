@@ -5,7 +5,7 @@ export default function Blog(): JSX.Element {
         <h1>Contato</h1>
         <p>
           Por favor, preencha o formulário abaixo para entrar em contato
-          conosco:
+          conosco.
         </p>
         <form className="container mx-auto p-20  bg- bg-green-700 text-align-content-center">
           <label>

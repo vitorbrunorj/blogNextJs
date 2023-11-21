@@ -3,9 +3,6 @@ import Link from 'next/link'
 export function Header() {
   return (
     <header>
-      <Link href="/">
-        <img src="/logo.png" alt="Logo da Empresa" />
-      </Link>
       <nav className="bg-slate-400">
         <ul>
           <li>
