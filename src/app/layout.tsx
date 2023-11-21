@@ -7,6 +7,7 @@ interface Metadata {
   title: string
   description: string
   keywords: string[]
+  metadataBase: string
   openGraph: {
     title: string
     images: string[]
@@ -27,6 +28,7 @@ export const metadata: Metadata = {
   title: 'Meu Site - Aprendendo NextJS',
   description: 'Site completo para praticar nextjs com sujeito programador',
   keywords: ['HTML', 'CSS', 'JavaScript', 'Programação'],
+  metadataBase: 'https://meusite.com',
   openGraph: {
     title: 'Aprendendo Next JS com Sujeito',
     images: [

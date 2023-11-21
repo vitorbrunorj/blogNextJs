@@ -3,11 +3,21 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['standard-with-typescript', 'plugin:react/recommended'],
+  extends: [
+    'standard-with-typescript',
+    'plugin:react/recommended',
+    'next',
+    'next/core-web-vitals'
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: './tsconfig.json'
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   },
   plugins: ['react'],
   rules: {
