@@ -1,8 +1,6 @@
-// src/components/Header.tsx
-import { type FC } from 'react'
 import Link from 'next/link'
 
-const Header: FC = () => {
+export function Header() {
   return (
     <header>
       <Link href="/">
@@ -14,15 +12,17 @@ const Header: FC = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/about">Sobre</Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li>
-            <Link href="/contact">Contato</Link>
+            <Link href="/contatos">Contatos</Link>
+          </li>
+          <li>
+            <Link href="/sobre">Sobre</Link>
           </li>
         </ul>
       </nav>
+      <hr />
     </header>
   )
 }
-
-export default Header

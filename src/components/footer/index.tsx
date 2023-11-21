@@ -4,6 +4,7 @@ import { type FC } from 'react'
 const Footer: FC = () => {
   return (
     <footer>
+      <hr />
       <p>© 2022 Sua Empresa</p>
       <ul>
         <li>
@@ -21,6 +22,7 @@ const Footer: FC = () => {
           <a href="https://www.twitter.com/suaempresa">Twitter</a>
         </li>
       </ul>
+      <br />
     </footer>
   )
 }
