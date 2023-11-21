@@ -3,9 +3,9 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 class MyDocument extends Document {
   render(): JSX.Element {
     return (
-      <Html lang="pt-br" className="minha-classe-html">
+      <Html lang="pt-br" suppressHydrationWarning={true}>
         <Head></Head>
-        <body className="minha-classe-body">
+        <body>
           <Main />
           <NextScript />
         </body>

@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
-      <body>
+    <html lang="pt-br" suppressHydrationWarning={true}>
+      <body suppressHydrationWarning={true}>
         <Header />
         {children}
         <Footer />
