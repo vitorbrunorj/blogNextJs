@@ -7,18 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook",
-    "test": "jest",
-    "deploy-static": "npm run build && npm run export",
-    "lint": "eslint src --max-warnings=0",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "lint:css": "stylelint '**/*.css'"
   },
   "dependencies": {
     "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "save": "^2.9.0",
+    "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -38,7 +34,10 @@
     "eslint-plugin-react": "^7.33.2",
     "postcss": "^8",
     "prettier": "^3.1.0",
-    "tailwindcss": "^3.3.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-recommended": "^13.0.0",
+    "stylelint-config-tailwindcss": "^0.0.7",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5.2.2"
   }
 }
