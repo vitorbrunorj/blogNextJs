@@ -4,10 +4,12 @@ import Head from 'next/head'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import Favicon from '@/public/favicon.ico'
-
 import { Open_Sans } from 'next/font/google'
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+const openSans = Open_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
 interface MyMetadata {
   title: string
   description: string

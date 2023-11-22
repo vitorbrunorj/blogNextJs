@@ -1,7 +1,7 @@
 export default function Home(): JSX.Element {
   return (
     <main>
-      <div className="bg-blue-300">
+      <div>
         <h1 className="text-xl tracking-widest ">
           Seja bem vindo a pagina home!
         </h1>

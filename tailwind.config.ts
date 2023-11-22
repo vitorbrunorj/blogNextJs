@@ -33,7 +33,29 @@ const config: Config = {
       borderRadius: {
         '4xl': '2rem'
       },
-      colors: {},
+      colors: {
+        primary: '#69d0b3',
+        secondary: '#cde5b3',
+        tertiary: '#9cdab3',
+        danger: '#e3342f',
+        light: '#f8f9fa',
+        dark: '#343a40',
+        success: '#38c172',
+        info: '#6cb2eb',
+        warning: '#ffed4a',
+        error: '#e3342f',
+        white: '#fff',
+        black: '#000',
+        'gray-100': '#f7fafc',
+        'gray-200': '#edf2f7',
+        'gray-300': '#e2e8f0',
+        'gray-400': '#cbd5e0',
+        'gray-500': '#a0aec0',
+        'gray-600': '#718096',
+        'gray-700': '#4a5568',
+        'gray-800': '#2d3748',
+        'gray-900': '#1a202c'
+      },
       zIndex: {
         '60': '60',
         '70': '70',
