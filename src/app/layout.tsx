@@ -73,7 +73,7 @@ export default function RootLayout({
     <html lang="pt-br" suppressHydrationWarning={true}>
       <Head>
         <Head>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" type="image/ico" />
         </Head>
       </Head>
       <body className={openSans.className} suppressHydrationWarning={true}>
