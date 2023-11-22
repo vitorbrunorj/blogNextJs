@@ -33,9 +33,7 @@ const config: Config = {
       borderRadius: {
         '4xl': '2rem'
       },
-      colors: {
-        cyan: '#9cdbff'
-      },
+      colors: {},
       zIndex: {
         '60': '60',
         '70': '70',

@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Seu código CSS personalizado aqui */
 .container {
@@ -67,7 +67,7 @@
   @apply bg-red-100 text-red-700;
 }
 
-html,
+/* html,
 body,
 p,
 h1,
@@ -77,4 +77,4 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
-}
+} */
