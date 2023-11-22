@@ -5,7 +5,10 @@ import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import Favicon from '@/public/favicon.ico'
 
-interface Metadata {
+import { Open_Sans } from 'next/font/google'
+
+const openSans = Open_Sans({ subsets: ['latin'] })
+interface MyMetadata {
   title: string
   description: string
   keywords: string[]
@@ -30,7 +33,7 @@ interface Metadata {
   }
 }
 
-export const metadata: Metadata = {
+export const metadata: MyMetadata = {
   title: 'Meu Site - Aprendendo NextJS',
   description: 'Site completo para praticar nextjs com sujeito programador',
   keywords: ['HTML', 'CSS', 'JavaScript', 'Programação'],
@@ -61,7 +64,6 @@ export const metadata: Metadata = {
     }
   }
 }
-
 export default function RootLayout({
   children
 }: {
@@ -74,7 +76,7 @@ export default function RootLayout({
           <link rel="icon" href="/favicon.ico" />
         </Head>
       </Head>
-      <body suppressHydrationWarning={true}>
+      <body className={openSans.className} suppressHydrationWarning={true}>
         <Header />
         {children}
         <Footer />
