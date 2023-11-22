@@ -13,7 +13,10 @@ interface Metadata {
   icons: Array<{ rel: string; url: string }>
   openGraph: {
     title: string
-    images: string[]
+    images: Array<{ url: string; width: number; height: number; alt: string }>
+    url: string
+    sitename: string
+    locale: string
   }
   robots: {
     index: boolean
@@ -35,9 +38,17 @@ export const metadata: Metadata = {
   metadataBase: 'https://meusite.com',
   openGraph: {
     title: 'Aprendendo Next JS com Sujeito',
+    url: 'https://meusite.com',
+    sitename: 'Meu Site',
     images: [
-      'https://sujeitoprogramador.com/wp-content/uploads/2023/06/softsk-1024x576.jpg'
-    ]
+      {
+        url: 'https://sujeitoprogramador.com/wp-content/uploads/2023/06/softsk-1024x576.jpg',
+        width: 1260,
+        height: 800,
+        alt: 'COLOCAR O NOME DO SITE'
+      }
+    ],
+    locale: 'pt_BR'
   },
   robots: {
     index: true,
@@ -59,7 +70,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning={true}>
       <Head>
-        <link rel="icon" href="/src/public/favicon.ico" />
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
       </Head>
       <body suppressHydrationWarning={true}>
         <Header />
