@@ -7,7 +7,7 @@ import Favicon from '@/public/favicon.ico'
 import { Open_Sans } from 'next/font/google'
 
 const openSans = Open_Sans({
-  weight: ['400', '700'],
+  weight: ['300', '400', '500', '700'],
   subsets: ['latin']
 })
 interface MyMetadata {

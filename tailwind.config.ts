@@ -38,7 +38,7 @@ const config: Config = {
         secondary: '#cde5b3',
         tertiary: '#9cdab3',
         danger: '#e3342f',
-        light: '#f8f9fa',
+        light: '#f7fafc',
         dark: '#343a40',
         success: '#38c172',
         info: '#6cb2eb',

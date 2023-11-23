@@ -2,38 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 1280px) {
-  html {
-    font-size: 100%;
-  }
-}
-
 @media (max-width: 1080px) {
-  html {
+  html,
+  icon-medium {
     font-size: 93.75%;
   }
 }
 
 @media (max-width: 720px) {
-  html {
+  html,
+  icon-medium {
     font-size: 87.5%;
   }
 }
 
 @media (max-width: 540px) {
-  html {
+  html,
+  icon-medium {
     font-size: 81.25%;
   }
 }
 
 @media (max-width: 360px) {
-  html {
+  html,
+  icon-medium {
     font-size: 75%;
   }
 }
 
 body {
-  background: var(--light);
+  background: #f7fafc;
 }
 
 body,
@@ -66,7 +64,7 @@ headerContent {
 }
 
 .container {
-  @apply mx-auto max-w-md text-center;
+  @apply mx-auto max-w-screen-xl text-center;
 }
 
 .header {
@@ -127,6 +125,18 @@ headerContent {
 
 .alert-danger {
   @apply bg-red-100 text-red-700;
+}
+
+.icon-small {
+  font-size: 1rem;
+}
+
+.icon-medium {
+  font-size: 1.2rem;
+}
+
+.icon-large {
+  font-size: 3rem;
 }
 
 /* html,
