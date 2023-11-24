@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
+import ActiveLink from '@/components/ActiveLink/ActiveLink'
+
 import { FaBars, FaYoutube, FaTelegram, FaLocationDot } from 'react-icons/fa6'
 import {
   FaFacebookSquare,
@@ -67,8 +69,8 @@ export function Header() {
 
       {/* Header Inferior */}
 
-      <div className="grid text-white bg-primary sticky top-0">
-        <div className="container h-r56px flex items-center justify-between px-2 py-2">
+      <div className="grid text-white font-medium tracking-wider bg-green-900 sticky top-0">
+        <div className="container h-r60px flex items-center justify-between px-2 py-2">
           <Link href="/">
             <Image
               src={logo}
@@ -77,13 +79,49 @@ export function Header() {
             />
           </Link>
 
-          <div className="hidden sm:flex flex-grow justify-evenly">
-            <Link href="/home">Home</Link>
-            <Link href="/sobre">Sobre</Link>
-            <Link href="/contatos">Contatos</Link>
-            <Link href="/servicos">Serviços</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/agendamento">Agendamento</Link>
+          <div className="hidden sm:flex flex-grow justify-center space-x-8">
+            <Link
+              href="/"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Home
+            </Link>
+            <Link
+              href="/sobre"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Sobre
+            </Link>
+            <Link
+              href="/agendamento"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Agendamento
+            </Link>
+            <Link
+              href="/servicos"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Serviços
+            </Link>
+            <Link
+              href="/contatos"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary  hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Contatos
+            </Link>
+            <Link
+              href="/blog"
+              className="custom-underline transition ease-in-out duration-1200 hover:text-primary  hover:shadow hover:scale-110"
+              style={{ textUnderlineOffset: '6px' }}
+            >
+              Blog
+            </Link>
           </div>
 
           <div className="sm:hidden py-1 px-1">
@@ -91,8 +129,6 @@ export function Header() {
           </div>
         </div>
       </div>
-      {/*       <div className="bg-blue-600 h-r536px"></div>
-      <div className="bg-blue-900 h-400"></div> */}
     </header>
   )
 }

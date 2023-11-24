@@ -162,16 +162,59 @@ headerContent {
   @apply bg-red-100 text-red-700;
 }
 
-.icon-small {
-  font-size: 1rem;
+.custom-underline {
+  position: relative;
 }
 
-.icon-medium {
-  font-size: 1.2rem;
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease-in-out;
 }
 
-.icon-large {
-  font-size: 3rem;
+.custom-underline:hover::after {
+  animation: grow-underline 0.2s forwards; /* aumenta a duração da animação */
+}
+
+@keyframes grow-underline {
+  0% {
+    width: 0;
+  }
+  40% {
+    width: 8px;
+  }
+  85% {
+    width: 18px; /* explosão para 18px */
+  }
+  95% {
+    width: 10px; /* retração para 12px */
+  }
+  100% {
+    width: 12px; /* termina em 8px */
+  }
+}
+
+.active {
+  color: var(--primary);
+}
+
+.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 12px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+  transform: translateX(-50%);
 }
 
 /* html,
