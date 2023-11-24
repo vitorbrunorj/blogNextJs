@@ -2,31 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
+@media (max-width: 1280px) {
+  html,
+  logo {
+    font-size: 100%;
+  }
+}
+
 @media (max-width: 1080px) {
   html,
-  icon-medium {
-    font-size: 93.75%;
+  logo {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  html,
+  logo {
+    font-size: 92.5%;
+  }
+}
+
+@media (max-width: 960px) {
+  html,
+  logo {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 840px) {
+  html,
+  logo {
+    font-size: 87.5%;
   }
 }
 
 @media (max-width: 720px) {
   html,
-  icon-medium {
-    font-size: 87.5%;
+  logo {
+    font-size: 85%;
   }
 }
 
-@media (max-width: 540px) {
+@media (max-width: 600px) {
   html,
-  icon-medium {
-    font-size: 81.25%;
+  logo {
+    font-size: 82.5%;
+  }
+}
+
+@media (max-width: 480px) {
+  html,
+  logo {
+    font-size: 80%;
   }
 }
 
 @media (max-width: 360px) {
   html,
-  icon-medium {
-    font-size: 75%;
+  logo {
+    font-size: 77.5%;
   }
 }
 

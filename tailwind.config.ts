@@ -22,14 +22,64 @@ const config: Config = {
         /* widest: '.25em', */ // Adicionado um espaçamento de letras mais amplo
       },
       fontSize: {
-        h1: ['2.25rem', { lineHeight: '2.5rem' }],
+        '9px': '0.5625rem', // 9px/16
+        '12px': '0.75rem', // 12px/16
+        '16px': '1rem', // 16px/16
+        '21px': '1.3125rem', // 21px/16
+        '38px': '2.375rem', // 38px/16
+        '52px': '3.25rem', // 52px/16
+        h1: ['2.375rem', { lineHeight: '2.5rem' }],
         h2: ['2rem', { lineHeight: '2.25rem' }],
         h3: ['1.75rem', { lineHeight: '2rem' }],
         h4: ['1.5rem', { lineHeight: '1.75rem' }],
-        h5: ['1.25rem', { lineHeight: '1.5rem' }],
+        h5: ['1.3125rem', { lineHeight: '1.5rem' }],
         h6: ['1rem', { lineHeight: '1.25rem' }],
         paragraph: ['1rem', { lineHeight: '1.5rem' }]
       },
+
+      height: {
+        '10': '0.6rem', // 10px
+        '12': '0.75rem', // 12px
+        '16': '1rem', // 16px
+        '21': '1.34rem', // 21px
+        '29': '1.78rem', // 29px
+        '38': '2.4rem', // 38px
+        '52': '3.23rem', // 52px
+        '69': '4.32rem', // 69px
+        '93': '5.8rem', // 93px
+        '124': '7.75rem', // 124px
+        '166': '10.4rem', // 166px
+        '223': '13.93rem', // 223px
+        '299': '18.7rem', // 299px
+        '400': '25rem', // 400px
+        '536': '33.5rem' // 536px
+      },
+      width: {
+        '2': '1.618rem', // 26px
+        '3': '2.618rem', // 42px
+        '4': '4.236rem', // 68px
+        '5': '6.854rem', // 110px
+        '6': '11.09rem', // 178px
+        '7': '17.944rem', // 287px
+        '8': '29.034rem', // 465px
+        '9': '46.978rem', // 752px
+        '10': '0.6rem', // 10px
+        '12': '0.75rem', // 12px
+        '16': '1rem', // 16px
+        '21': '1.34rem', // 21px
+        '29': '1.78rem', // 29px
+        '38': '2.4rem', // 38px
+        '52': '3.23rem', // 52px
+        '69': '4.32rem', // 69px
+        '93': '5.8rem', // 93px
+        '124': '7.75rem', // 124px
+        '166': '10.4rem', // 166px
+        '223': '13.93rem', // 223px
+        '299': '18.7rem', // 299px
+        '400': '25rem', // 400px
+        '536': '33.5rem' // 536px
+      },
+
       borderRadius: {
         '4xl': '2rem'
       },
@@ -56,6 +106,20 @@ const config: Config = {
         'gray-800': '#2d3748',
         'gray-900': '#1a202c'
       },
+      textShadow: {
+        default: '0 2px 5px rgba(0, 0, 0, 0.5)',
+        soft: '0 2px 5px rgba(0, 0, 0, 0.3)',
+        lg: '0 2px 10px rgba(0, 0, 0, 0.5)',
+        xl: '0 2px 20px rgba(0, 0, 0, 0.5)',
+        '2xl': '0 2px 25px rgba(0, 0, 0, 0.5)',
+        inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+        outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
+        none: 'none'
+      },
+      boxShadow: {
+        icon: '0 2px 5px rgba(0, 0, 0, 0.5)'
+      },
+
       zIndex: {
         '60': '60',
         '70': '70',
@@ -63,15 +127,21 @@ const config: Config = {
         '90': '90',
         '100': '100'
       },
-      spacing: {}
+      spacing: {
+        '0.1': '0.1rem', // 1.6px
+        '0.15': '0.15rem', // 2.4px
+        '0.2': '0.2rem', // 3.2px
+        '0.25': '0.25rem', // 4px
+        '0.35': '0.35rem', // 5.6px
+        '0.5': '0.5rem', // 8px
+        '0.75': '0.75rem' // 12px
+      }
     }
   },
   variants: {
     backgroundColor: ['responsive', 'hover', 'focus', 'active']
   },
-  plugins: [
-    // Aqui você pode adicionar plugins personalizados do Tailwind
-  ]
+  plugins: [require('tailwindcss-textshadow')]
 }
 
 export default config
