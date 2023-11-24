@@ -1,5 +1,25 @@
 import type { Config } from 'tailwindcss'
+function generateScale(
+  start: number,
+  end: number,
+  factor: number = 1.33
+): Record<string, string> {
+  const scale: Record<string, string> = {}
 
+  for (let i = start; i <= end; i++) {
+    const pxValue = Math.round(i * factor)
+    scale[`r${pxValue}px`] = `${pxValue}px` // Usa o valor real em pixels como valor
+  }
+
+  const orderedScale: Record<string, string> = {}
+  Object.keys(scale)
+    .sort((a, b) => Number(a.slice(1, -2)) - Number(b.slice(1, -2))) // Ordena as chaves em ordem crescente de pixels
+    .forEach((key) => {
+      orderedScale[key] = scale[key]
+    })
+
+  return orderedScale
+}
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -38,13 +58,15 @@ const config: Config = {
       },
 
       height: {
+        ...generateScale(0.1, 725, 1.33),
         '10': '0.6rem', // 10px
         '12': '0.75rem', // 12px
         '16': '1rem', // 16px
         '21': '1.34rem', // 21px
         '29': '1.78rem', // 29px
         '38': '2.4rem', // 38px
-        '52': '3.23rem', // 52px
+        '52': '3.25rem', // 52px
+        '55': '3.437rem', // 55px
         '69': '4.32rem', // 69px
         '93': '5.8rem', // 93px
         '124': '7.75rem', // 124px
@@ -55,21 +77,23 @@ const config: Config = {
         '536': '33.5rem' // 536px
       },
       width: {
-        '2': '1.618rem', // 26px
-        '3': '2.618rem', // 42px
-        '4': '4.236rem', // 68px
-        '5': '6.854rem', // 110px
-        '6': '11.09rem', // 178px
-        '7': '17.944rem', // 287px
-        '8': '29.034rem', // 465px
-        '9': '46.978rem', // 752px
+        ...generateScale(0.1, 725, 1.33),
+        '26': '1.618rem', // 26px
+        '42': '2.618rem', // 42px
+        '68': '4.236rem', // 68px
+        '110': '6.854rem', // 110px
+        '178': '11.09rem', // 178px
+        '287': '17.944rem', // 287px
+        '465': '29.034rem', // 465px
+        '762': '46.978rem', // 752px
         '10': '0.6rem', // 10px
         '12': '0.75rem', // 12px
         '16': '1rem', // 16px
         '21': '1.34rem', // 21px
         '29': '1.78rem', // 29px
         '38': '2.4rem', // 38px
-        '52': '3.23rem', // 52px
+        '52': '3.25rem', // 52px
+        '55': '3.4375rem', // 55px
         '69': '4.32rem', // 69px
         '93': '5.8rem', // 93px
         '124': '7.75rem', // 124px

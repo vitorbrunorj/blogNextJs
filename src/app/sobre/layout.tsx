@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Sobre',
-  description: 'Esse é o painel demonstrativo do site'
+  title: 'Sobre - Keyko Terapias',
+  description: 'Pagina sobre a historia da Keyko'
 }
 
 export default function SobreLayout({
@@ -8,11 +8,5 @@ export default function SobreLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <h3>Header do sobre</h3>
-      <br />
-      {children}
-    </>
-  )
+  return <>{children}</>
 }

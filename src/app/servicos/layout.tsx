@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Contatos - Keyko Terapias',
-  description: 'Pagina de contatos do blog'
+  title: 'Serviços - Keyko Terapias',
+  description: 'Pagina de serviços oferecidos pela Keyko Terapias'
 }
 
 export default function ContatosLayout({

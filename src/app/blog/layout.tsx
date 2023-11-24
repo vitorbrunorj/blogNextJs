@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Blog',
-  description: 'Esse é o painel demonstrativo do site'
+  title: 'Blog - Keyko Terapias',
+  description: 'Pagina com os artigos do blog'
 }
 
 export default function BlogLayout({
@@ -8,11 +8,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <>
-      <h3>Header do Blog</h3>
-      <br />
-      {children}
-    </>
-  )
+  return <>{children}</>
 }

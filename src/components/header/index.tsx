@@ -16,43 +16,43 @@ export function Header() {
       {/* Header superior */}
       <div className="grid bg-light ">
         <div className="container">
-          <div className="h-38 hidden sm:flex flex flex-wrap px-2 justify-between">
+          <div className="h-r36px hidden sm:flex flex flex-wrap px-2 justify-around">
             <div className="flex opacity-80 items-center space-x-2 ">
               <Link href="https://www.facebook.com/your-facebook-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <FaFacebookSquare className="text-xl" color="#3b5998" />
+                <FaFacebookSquare className="text-lg" color="#3b5998" />
               </Link>
               <Link href="https://www.instagram.com/your-facebook-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <FaInstagramSquare className="text-xl" color="#E1306C" />
+                <FaInstagramSquare className="text-lg" color="#E1306C" />
               </Link>
               <Link href="https://www.whatsapp.com/your-facebook-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <FaWhatsappSquare className="text-xl" color="#25D366" />
+                <FaWhatsappSquare className="text-lg" color="#25D366" />
               </Link>
               <Link href="https://www.gmail.com/your-facebook-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <SiGmail className="text-xl" color="#D44638" />
+                <SiGmail className="text-lg" color="#D44638" />
               </Link>
 
               <Link href="https://www.telegram.com/your-telegram-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <FaTelegram className="text-xl" color="#0088cc" />
+                <FaTelegram className="text-lg" color="#0088cc" />
               </Link>
               <Link href="https://www.youtube.com/your-youtube-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
-                <FaYoutube className="text-xl" color="#FF0000" />
+                <FaYoutube className="text-lg" color="#FF0000" />
               </Link>
             </div>
 
-            <div className="hidden sm:flex text-black text-xs font-light tracking-widest text-shadow items-center px-2 py-2 space-x-2">
+            <div className="hidden sm:flex text-black text-xs  font-light tracking-widest text-shadow items-center px-2 py-2 space-x-2">
               <div className="text-gray-600">
                 <BsFillTelephoneFill />
               </div>
               <span>Telefone: (21) 98094-3965 </span>
             </div>
 
-            <div className="hidden md:flex text-black text-12px  font-light tracking-wide text-shadow items-center px-2 space-x-2">
+            <div className="hidden md:flex text-black text-xs  font-light tracking-wide text-shadow items-center px-2 space-x-2">
               <div className="text-gray-600 ">
                 <FaLocationDot />
               </div>
@@ -67,25 +67,32 @@ export function Header() {
 
       {/* Header Inferior */}
 
-      <div className="grid text-white bg-primary fixed-top ">
-        <div className="container">
-          <div className="flex px-2 flex-wrap h-52 items-center justify-between">
-            <Link href="/">
-              <Image
-                src={logo}
-                alt="Keyko Terapias logo"
-                className="cursor-pointer"
-              />
-            </Link>
+      <div className="grid text-white bg-primary sticky top-0">
+        <div className="container h-r56px flex items-center justify-between px-2 py-2">
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="Keyko Terapias logo"
+              className="cursor-pointer"
+            />
+          </Link>
 
-            <div className="sm:hidden py-1 px-1">
-              <FaBars className="text-4xl" />
-            </div>
+          <div className="hidden sm:flex flex-grow justify-evenly">
+            <Link href="/home">Home</Link>
+            <Link href="/sobre">Sobre</Link>
+            <Link href="/contatos">Contatos</Link>
+            <Link href="/servicos">Serviços</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/agendamento">Agendamento</Link>
+          </div>
+
+          <div className="sm:hidden py-1 px-1">
+            <FaBars className="text-4xl" />
           </div>
         </div>
-        <div className="bg-blue-600 h-536"></div>
-        <div className="bg-blue-900 h-400"></div>
       </div>
+      {/*       <div className="bg-blue-600 h-r536px"></div>
+      <div className="bg-blue-900 h-400"></div> */}
     </header>
   )
 }
