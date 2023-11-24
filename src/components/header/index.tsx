@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
-import ActiveLink from '@/components/ActiveLink/ActiveLink'
 
 import { FaBars, FaYoutube, FaTelegram, FaLocationDot } from 'react-icons/fa6'
 import {
