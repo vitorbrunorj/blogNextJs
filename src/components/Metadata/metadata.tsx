@@ -1,24 +1,8 @@
-import './globals.css'
-import Head from 'next/head'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
+'use client'
+import React from 'react'
 import Favicon from '@/public/favicon.ico'
-import { Open_Sans as FontSans } from 'next/font/google'
-import localFont from 'next/font/local'
-import { cn } from '@/lib/utils'
-import { ThemeProvider } from './_components/theme-provider'
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans'
-})
-
-const fontHeading = localFont({
-  src: '../assets/fonts/CalSans-SemiBold.woff2',
-  variable: '--font-heading'
-})
-
-const metadata = {
+export const metadata = {
   title: 'Meu Site - Aprendendo NextJS',
   description: 'Site completo para praticar nextjs com sujeito programador',
   keywords: ['HTML', 'CSS', 'JavaScript', 'Programação'],
@@ -79,19 +63,13 @@ export interface Robots {
   }
 }
 
-// Use constantes para strings repetidas
-const INDEX = 'index'
-const NOINDEX = 'noindex'
-const FOLLOW = 'follow'
-const NOFOLLOW = 'nofollow'
-
 const generateRobotContent = ({
   index,
   follow
 }: {
   index: boolean
   follow: boolean
-}) => `${index ? INDEX : NOINDEX}, ${follow ? FOLLOW : NOFOLLOW}`
+}) => `${index ? 'index' : 'noindex'}, ${follow ? 'follow' : 'nofollow'}`
 
 interface MetaTagsProps {
   robots: {
@@ -113,14 +91,14 @@ interface MetaTagsProps {
 
 const AUTHOR_NAME = 'Nome do Autor'
 
-const MetaTags = ({
+const MetaTags: React.FC<MetaTagsProps> = ({
   robots,
   openGraph,
   title,
   description,
   keywords,
   icons
-}: MetaTagsProps) => (
+}) => (
   <>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -144,34 +122,5 @@ const MetaTags = ({
     <link rel="icon" href={icons[0].url} />
   </>
 )
-interface RootLayoutProps {
-  children: React.ReactNode
-}
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
-  return (
-    <>
-      <Head>
-        <link rel="icon" href="./favicon.ico" type="image/ico" />
-        <MetaTags {...metadata} />
-      </Head>
-      <html>
-        <body
-          className={cn(
-            'min-h-screen bg-background font-sans antialiased',
-            fontSans.variable,
-            fontHeading.variable
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Header />
-            {children}
-            <Footer />
-          </ThemeProvider>
-        </body>
-      </html>
-    </>
-  )
-}
-
-export default RootLayout
+export default MetaTags
