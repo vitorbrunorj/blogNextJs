@@ -70,17 +70,19 @@ export function Header() {
 
       <div className="grid text-white font-medium tracking-wider bg-primary sticky top-0">
         <div className="container h-16 flex items-center justify-between px-2 py-2">
-          <Link href="/">
-            <Image
-              src={logo}
-              alt="Keyko Terapias logo"
-              width={136} // Adicione a largura aqui
-              height={40} // Adicione a altura aqui
-              className="cursor-pointer"
-            />
-          </Link>
+          <div className="flex ">
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Keyko Terapias logo"
+                width={136} // Adicione a largura aqui
+                height={40} // Adicione a altura aqui
+                className="cursor-pointer"
+              />
+            </Link>
+          </div>
 
-          <div className="hidden sm:flex flex-grow justify-center space-x-8 font-heading tracking-widest">
+          <div className="hidden sm:flex flex-grow justify-center px-2 space-x-5 font-heading tracking-widest">
             <Link
               href="/"
               className=" transition ease-in-out duration-1200 hover:text-secondary hover:scale-110"

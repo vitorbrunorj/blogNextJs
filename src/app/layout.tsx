@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import './globals.css'
 import Head from 'next/head'
 import { Header } from '@/components/header'
@@ -166,6 +167,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Header />
             {children}
+            <Analytics />
             <Footer />
           </ThemeProvider>
         </body>

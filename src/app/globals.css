@@ -64,36 +64,31 @@ body {
 }
 
 @media (max-width: 840px) {
-  html,
-  logo {
+  html {
     font-size: 100%;
   }
 }
 
 @media (max-width: 720px) {
-  html,
-  logo {
+  html {
     font-size: 95%;
   }
 }
 
 @media (max-width: 600px) {
-  html,
-  logo {
+  html {
     font-size: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  html,
-  logo {
+  html {
     font-size: 85%;
   }
 }
 
 @media (max-width: 360px) {
-  html,
-  logo {
+  html {
     font-size: 80%;
   }
 }

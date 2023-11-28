@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Agendamento - Keyko Terapias',
+  title: 'Keyko Terapias - Agendamento',
   description: 'Pagina de agendamento'
 }
 

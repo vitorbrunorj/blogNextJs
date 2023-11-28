@@ -1,17 +1,27 @@
-export default function Home(): JSX.Element {
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import Image from 'next/image'
+
+import IntroSection from './_components/intro-section'
+import AboutSection from './_components/about-section'
+import FeatureSection from './_components/feature-section'
+import InvestmentSection from './_components/investment-section'
+import FaqSection from './_components/faq-section'
+
+export default function Home() {
   return (
-    <main>
-      <div>
-        <h1 className="text-xl tracking-widest ">
-          Seja bem vindo a pagina home!
-        </h1>
-        <h2>Seja bem vindo a pagina home!</h2>
-        <h3>Seja bem vindo a pagina home!</h3>
-        <h4>Seja bem vindo a pagina home!</h4>
-        <h5>Seja bem vindo a pagina home!</h5>
-        <h6>Seja bem vindo a pagina home!</h6>
-        <h1>Seja bem vindo a pagina home!</h1>
-      </div>
-    </main>
+    <>
+      {/* <div className='fixed h-18 md:h-12 text-sm md:text-base p-4 flex justify-center items-center group bg-gradient-to-r from-primary to-secondary w-full z-10'>
+        <p className='text-white'>
+          Utilize o cupom{' '}
+          <span className='font-mono font-bold'>COMUNIDADETND</span> e ganhe 50%
+          de desconto. Valor à vista de{' '}
+          <span className='font-mono font-bold'>
+            R$ 489,00 ou 12x de R$ 48,81
+          </span>{' '}
+          .
+        </p>
+      </div> */}
+      <main className="pt-20 md:pt-18 "></main>
+    </>
   )
 }
