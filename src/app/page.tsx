@@ -1,27 +1,25 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+import Link from 'next/link'
 import Image from 'next/image'
-
-import IntroSection from './_components/intro-section'
-import AboutSection from './_components/about-section'
-import FeatureSection from './_components/feature-section'
-import InvestmentSection from './_components/investment-section'
-import FaqSection from './_components/faq-section'
+import banner from '@/public/banner.png'
 
 export default function Home() {
   return (
-    <>
-      {/* <div className='fixed h-18 md:h-12 text-sm md:text-base p-4 flex justify-center items-center group bg-gradient-to-r from-primary to-secondary w-full z-10'>
-        <p className='text-white'>
-          Utilize o cupom{' '}
-          <span className='font-mono font-bold'>COMUNIDADETND</span> e ganhe 50%
-          de desconto. Valor à vista de{' '}
-          <span className='font-mono font-bold'>
-            R$ 489,00 ou 12x de R$ 48,81
-          </span>{' '}
-          .
-        </p>
-      </div> */}
-      <main className="pt-20 md:pt-18 "></main>
-    </>
+    <main className="bg-gradient-to-b from-primary to-white min-h-[200px] ">
+      <section className="container flex justify-between items-center">
+        <div>
+          <h1 className="text-base font-bold tracking-wider text-primary">
+            Bem-vindo à Jornada de Transformação com Elaine Keyko, Terapeuta
+            Integrativa!
+          </h1>
+        </div>
+        <Link href="/">
+          <Image
+            className="object-contain"
+            src={banner}
+            alt="Keyko Terapias logo"
+          />
+        </Link>
+      </section>
+    </main>
   )
 }

@@ -27,13 +27,13 @@
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
+    --background: 0, 0%, 16%;
     --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
+    --card: 0, 0%, 16%;
     --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
+    --popover: 0, 0%, 16%;
     --popover-foreground: 210 20% 98%;
-    --primary: 263.4 70% 50.4%;
+    --primary: 330, 30%, 51%;
     --primary-foreground: 210 20% 98%;
     --secondary: 215 27.9% 16.9%;
     --secondary-foreground: 210 20% 98%;
@@ -45,7 +45,7 @@
     --destructive-foreground: 210 20% 98%;
     --border: 215 27.9% 16.9%;
     --input: 215 27.9% 16.9%;
-    --ring: 263.4 70% 50.4%;
+    --ring: 330, 30%, 51%;
   }
 }
 
@@ -60,24 +60,27 @@
 
 body {
   min-width: 320px;
+}
+
+body {
   font-size: 100%;
 }
 
 @media (max-width: 840px) {
   html {
-    font-size: 100%;
+    font-size: 95%;
   }
 }
 
 @media (max-width: 720px) {
   html {
-    font-size: 95%;
+    font-size: 90%;
   }
 }
 
 @media (max-width: 600px) {
   html {
-    font-size: 90%;
+    font-size: 87.5%;
   }
 }
 

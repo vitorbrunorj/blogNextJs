@@ -15,7 +15,7 @@ export function Footer() {
       <footer>
         <div className="bg-primary ">
           <div className="container px-2 py-3 ">
-            <nav className="  flex justify-between text-white h-44 px-1">
+            <nav className="flex justify-between text-white h-40 px-1">
               <section>
                 <Link href="/">
                   <Image
@@ -45,8 +45,8 @@ export function Footer() {
         </div>
       </footer>
 
-      <div className="bg-slate-200 ">
-        <div className="container flex items-center justify-center px-2 py-2 h-16 ">
+      <div className=" ">
+        <div className="container flex items-center justify-center px-2 py-2 h-8 ">
           <hr />
           <p>© 2023 Keyko Terapias - Created by Vitor Bruno </p>
         </div>
@@ -106,8 +106,8 @@ function SocialLinks() {
   return (
     <div>
       <h2 className="font-heading tracking-widest">Siga-nos</h2>
-      <ul className="flex py-2">
-        <div className="bg-white p-2 space-x-3 flex rounded-full">
+      <ul className="flex py-2 bg-slate-50 p-2 rounded-full">
+        <section className="flex space-x-3">
           <li>
             <Link href="https://www.facebook.com/your-facebook-page">
               <a target="_blank" rel="noopener noreferrer"></a>
@@ -132,7 +132,7 @@ function SocialLinks() {
               <SiGmail className="text-lg" color="#D44638" />
             </Link>
           </li>
-        </div>
+        </section>
       </ul>
     </div>
   )

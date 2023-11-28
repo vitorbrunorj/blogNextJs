@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from '@/public/logo.svg'
+import { ModeToggle } from '@/app/_components/mode-toggle'
 
 import { FaBars, FaYoutube, FaTelegram, FaLocationDot } from 'react-icons/fa6'
 import {
@@ -15,9 +16,9 @@ export function Header() {
   return (
     <header>
       {/* Header superior */}
-      <div className="grid bg-light ">
+      <section className="grid">
         <div className="container">
-          <div className="h-9 hidden lg:flex flex-wrap px-2 justify-around">
+          <div className="h-8 hidden lg:flex flex-wrap px-2 justify-around">
             <div className="flex opacity-80 items-center space-x-2 ">
               <Link href="https://www.facebook.com/your-facebook-page">
                 <a target="_blank" rel="noopener noreferrer"></a>
@@ -45,32 +46,32 @@ export function Header() {
               </Link>
             </div>
 
-            <div className="sm:flex text-black text-xs font-light tracking-widest text-shadow items-center px-2 py-2 space-x-2">
-              <div className="text-gray-600">
+            <section className="sm:flex  text-xs font-light tracking-widest text-shadow items-center px-2 py-2 space-x-2">
+              <div className="text-slate-500">
                 <BsFillTelephoneFill />
               </div>
               <span>Telefone: (21) 98094-3965 </span>
-            </div>
+            </section>
 
-            <div className="hidden lg:flex text-black text-xs font-light tracking-wide text-shadow items-center px-2 space-x-2">
+            <section className="hidden lg:flex  text-xs font-light tracking-wide text-shadow items-center px-2 space-x-2">
               {' '}
-              <div className="text-gray-600 ">
+              <div className="text-slate-500 ">
                 <FaLocationDot />
               </div>
               <span>
                 R. Visc. de Pirajá, 572 - 6 andar - Ipanema, Rio de Janeiro -
                 RJ, 22410-002
               </span>
-            </div>
+            </section>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Header Inferior */}
 
-      <div className="grid text-white font-medium tracking-wider bg-primary sticky top-0">
-        <div className="container h-16 flex items-center justify-between px-2 py-2">
-          <div className="flex ">
+      <section className="grid text-white font-medium tracking-wider bg-primary sticky top-0">
+        <div className="container h-14 flex items-center justify-between px-2 py-2">
+          <div className="flex w-28 ">
             <Link href="/">
               <Image
                 src={logo}
@@ -121,11 +122,15 @@ export function Header() {
             </Link>
           </div>
 
+          <div className="flex flex-grow justify px-2 space-x-5 font-heading">
+            <ModeToggle />
+          </div>
+
           <div className="sm:hidden py-1 px-1">
             <FaBars className="text-4xl" />
           </div>
         </div>
-      </div>
+      </section>
     </header>
   )
 }

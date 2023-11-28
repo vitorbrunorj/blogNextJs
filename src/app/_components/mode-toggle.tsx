@@ -39,6 +39,7 @@ export function ModeToggle() {
           Dark
         </DropdownMenuItem>
         <DropdownMenuItem
+          className="hidden"
           onSelect={() => {
             setTheme('system')
           }}

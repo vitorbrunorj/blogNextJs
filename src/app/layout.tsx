@@ -154,6 +154,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
     <>
       <Head>
         <link rel="icon" href="./favicon.ico" type="image/ico" />
+
         <MetaTags {...metadata} />
       </Head>
       <html>
